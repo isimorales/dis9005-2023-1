@@ -1,15 +1,26 @@
-body {background-color: blanchedalmond;
+body {background-color: rgb(239, 209, 165);
 }
+
+@media only screen and (max-width: 600px) { /* me habia equivocado y puesto lo responsivo en el html, lo principal
+  fue que falto el body, obtuve lo bueno de mi compañera https://github.com/disenoUDP/dis9005-2023-1/blob/main/solemne-01/someteang/style.css y de https://www.w3schools.com/cssref/css3_pr_mediaquery.php*/
+body {
+  background-color: rgb(8, 5, 145); 
+} 
+} 
+
+
 h1 {
     border: 2px solid powderblue;
   } 
   /* esto es para agregar un borde al titulo */
 
 
+
 .bacan {
     background-color: palevioletred;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 150%
-}
+    font-size: 150% 
+  }
+    
 
 /* aqui aplique la class bacan con color de fondo, fuente y tamaño */
