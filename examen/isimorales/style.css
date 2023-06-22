@@ -1,19 +1,37 @@
-* {
+/*inspo https://www.adrienloret.com/*/ 
+*{
     box-sizing: border-box;
     padding: 10px;
 }
 
-li {
-    display: inline;
-
+@media (min-width:100px) {
+    .galeria {
+        grid-template-columns: repeat(1, 0.1fr);
+    }
 }
 
-/*encabezado*/
+@media (min-width:520px) {
+    .galeria {
+        grid-template-columns: repeat(2, .1fr);
+    }
+}
+
+@media (min-width:728px) {
+    .galeria {
+        grid-template-columns: repeat(3, .2fr);
+    }
+}
+
+@media (min-width:1024px) {
+    .galeria {
+        grid-template-columns: repeat(4, .3fr);
+    }
+}
 
 /*el display flex es para que un elemento quede al lado de el otro*/
 
 figure {
-    position: relative;
+    position: absolute;
 }
 
 figcaption {
@@ -25,7 +43,6 @@ figcaption {
     right: 0;
     background-color: rgba(0, 0, 0, .7);
     text-align: center;
-    font: 20/30px;
     font-family: 'Courier New', Courier, monospace;
     color: aliceblue;
 
@@ -39,57 +56,34 @@ figcaption {
 /*esto es para hacer todo el efecto de las fotos
 extraido de https://www.youtube.com/watch?v=crn9CGC-OW4&ab_channel=SINERGIA */
 .contenedor {
-
-    padding: 1px;
-    position: relative;
-    border: 9px;
-    width: 100%;
-    margin-right: 2px;
-    /*este es el margen de la derecha*/
-    margin-left: 2px;
-    /*sirve para eliminar objetos que estan al rededor*/
+    width: 95%;
 }
 
 
-.contenedor img {
 
 
+
+
+.imagen:hover img {
     transition: all .3s;
-}
-
-.contenedor:hover img {
-
     transform: scale(1.05);
     display: block;
 }
 
-.contenedor .contenido {
 
 
-    background: rgb(0, 0, .8);
-    position: absolute;
-    top: -100%;
-    left: 0;
-    text-align: justify;
-    height: 100%;
-    color: aliceblue;
-    box-sizing: border-box;
-}
 
-
-.container:hover .contenido {
-
+.imagen:hover .contenido {
     top: 0;
 }
 
 
-
-
-
 /*aqui parte la cosas para hacer la grilla en escala 4:5*/
 .imagen {
-    /*porque aqui me toma todas si estan por separado?*/
-    width: 100%
+    width: 400px;
+    height: 500px;
+/* /*porque aqui me toma todas si estan por separado?*/
+
 }
 
 .imagen img {
@@ -98,16 +92,12 @@ extraido de https://www.youtube.com/watch?v=crn9CGC-OW4&ab_channel=SINERGIA */
     overflow: hidden
 }
 
-.galeria {
-    border: 1px;
-    width: 100%;
-    margin-right: 20px;
-    margin-left: 2px;
+.galeria  {
 
     display: grid;
-    grid-template-columns: repeat(4, 2fr);
-    column-gap: 1px;
-    row-gap: 1px;
+    grid-template-columns: repeat(4, .3fr);
+    column-gap: 0px;
+    row-gap: 0px;
 }
 
 
@@ -116,38 +106,25 @@ figure:hover figcaption {
     display: block;
 }
 
+/*aqui parte la parte de arriba de la pag*/
 
+.menu li {
+    display: inline;
+}
+.cabecera {
+    box-sizing: border-box;
 
-
-
-
-
-
-
-
-
-
-
-@media (min-width:100px) {
-    .galeria {
-        grid-template-columns: repeat(1, 1fr);
-    }
 }
 
-@media (min-width:520px) {
-    .galeria {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
+/*encabezado*/
 
-@media (min-width:728px) {
-    .galeria {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
 
-@media (min-width:1024px) {
-    .galeria {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
+
+
+
+
+
+
+
+
+
